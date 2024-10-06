@@ -75,13 +75,13 @@ DROP TABLE IF EXISTS stations;
 ```
 #### Import/Export Data
 1.  General
-  * Filename > Select File
-  * Format > CSV
-  * Encoding > UTF8
+    * Filename > Select File
+    * Format > CSV
+    * Encoding > UTF8
 2. Options
-  * Header > turn on
+    * Header > turn on
 3. Columns
-  * remove id
+    * remove id
 
 
    
