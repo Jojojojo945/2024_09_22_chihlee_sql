@@ -1,0 +1,17 @@
+ CREATE TABLE IF NOT EXISTS stations (
+    
+    id SERIAL PRIMARY KEY,
+    code VARCHAR(5) NOT NULL UNIQUE,
+    name VARCHAR(10) NOT NULL UNIQUE,
+    e_name VARCHAR(50)
+	);
+
+ALTER TABLE stations
+ALTER COLUMN name 
+type VARCHAR(15);
+
+ALTER TABLE stations
+ALTER COLUMN e_name 
+DROP CONSTRAINT e_name;
+
+DROP TABLE IF EXISTS stations;
