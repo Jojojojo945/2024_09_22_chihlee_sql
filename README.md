@@ -53,8 +53,36 @@ https://meet.google.com/zfb-kupf-nok
            * Username: render_jo_user
            * Host name/address: dpg-crnslqm8ii6s73evgni0-a.singapore-postgres.render.com
            * PW: DEbN3GhqIMg5eM2cXJeq45XKsRHJWEB4 (Save Password)
-           
-      
+
+
+---
+
+### CREATE TABLE
+```
+ CREATE TABLE IF NOT EXISTS stations (
+    id SERIAL PRIMARY KEY,
+    code VARCHAR(5) NOT NULL UNIQUE,
+    name VARCHAR(10) NOT NULL UNIQUE,
+    e_name VARCHAR(50)
+	);
+
+ALTER TABLE stations
+ALTER COLUMN name 
+type VARCHAR(15);
+
+DROP TABLE IF EXISTS stations;
+
+```
+#### Import/Export Data
+1.  General
+  * Filename > Select File
+  * Format > CSV
+  * Encoding > UTF8
+2. Options
+  * Header > turn on
+3. Columns
+  * remove id
+
 
    
 
