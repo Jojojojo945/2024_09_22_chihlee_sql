@@ -21,7 +21,7 @@ https://meet.google.com/zfb-kupf-nok
 3. AutoSave
    * Setting > AutoSave > AfterDelay
 4. Profile
-   * 啓用遠端通道存取
+   * 啓用遠端通道存取 > 開啓此工作階段 > 利用GitHub登入
    * 利用GitHub登入
 
 ### Git
