@@ -99,5 +99,13 @@ DROP TABLE IF EXISTS stations;
     * remove id
 
 
-   
+SQL 關鍵字
+順序
+SELECT 選取
+FROM 來源
+WHERE 條件
+GROUP BY 分組
+HAVING 條件
+ORDER BY 順序
+LIMIT 筆數限制
 
