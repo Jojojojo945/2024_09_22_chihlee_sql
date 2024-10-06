@@ -99,13 +99,13 @@ DROP TABLE IF EXISTS stations;
     * remove id
 
 
-SQL 關鍵字
+### SQL 關鍵字
 順序
-SELECT 選取
-FROM 來源
-WHERE 條件
-GROUP BY 分組
-HAVING 條件
-ORDER BY 順序
-LIMIT 筆數限制
+1. SELECT 選取
+2. FROM 來源
+3. WHERE 條件
+4. GROUP BY 分組
+5. HAVING 條件
+6. ORDER BY 順序
+7. LIMIT 筆數限制
 
