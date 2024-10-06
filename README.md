@@ -60,7 +60,10 @@ https://meet.google.com/zfb-kupf-nok
 ### Backup pgAdmin4 database
 * pgAdmin4 > Schemas > Table
 * render_jo> right click > Backup
-* Backup > Create file name > format > directory > encoding > UTF8
+* Backup
+	* Create file name
+   	* Format > Directory
+   	* Encoding > UTF8
 
 ### Restore pgAdmin4 database
 Restore > RP_a27_mydatabase_a27_restore
