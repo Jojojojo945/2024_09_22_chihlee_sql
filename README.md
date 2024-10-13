@@ -50,8 +50,8 @@ https://meet.google.com/zfb-kupf-nok
         1. General
            * Name: render_jo
         2. Connection
-           * Username: render_jo_user
            * Host name/address: dpg-crnslqm8ii6s73evgni0-a.singapore-postgres.render.com
+           * Username: render_jo_user
            * PW: DEbN3GhqIMg5eM2cXJeq45XKsRHJWEB4 (Save Password)
 
 
