@@ -6,7 +6,7 @@ CREATE TABLE students (
 
 CREATE TABLE enrollments (
     enrollment_id SERIAL PRIMARY KEY,
-    student_id smallint REFERENCES students(student_id),
+    student_id smallint REFERENCES students(student_id), /*欄位constraint, REFERENCES*/
     course_name VARCHAR(20),
     grade VARCHAR(5)
 );
@@ -17,3 +17,45 @@ INSERT INTO students (name, age) VALUES
     ('王大寶', 21),
     ('陳雅婷', 20),
     ('林志偉', 22);
+
+INSERT INTO enrollments (student_id, course_name, grade) VALUES
+    (1, '資料庫系統', 'A'),
+    (1, '程式設計', 'B+'),
+    (2, '資料庫系統', 'A-'),
+    (2, '網頁設計', 'A'),
+    (3, '程式設計', 'B'),
+    (3, '資料結構', 'B+'),
+    (4, '資料庫系統', 'A+'),
+    (4, '作業系統', 'A-'),
+    (5, '網頁設計', 'B+'),
+    (5, '資料庫系統', 'A-');
+
+/*兩個資料表關聯*/
+SELECT *
+FROM enrollments JOIN students ON enrollments.student_id = students.student_id; 
+
+SELECT students.student_id,
+		name,
+		age,
+		course_name,
+		grade
+FROM enrollments JOIN students 
+ON enrollments.student_id = students.student_id; 
+
+/*改名 enrollment to e; students to s*/
+SELECT s.student_id,
+		name,
+		age,
+		course_name,
+		grade
+FROM enrollments e JOIN students s
+ON e.student_id = s.student_id;
+
+SELECT s.student_id AS 學生編號,
+		name AS 學生姓名,
+		age AS 年齡,
+		course_name AS 課程名稱,
+		grade AS 成績
+FROM enrollments e JOIN students s
+				ON e.student_id = s.student_id
+WHERE name = '張小明';
