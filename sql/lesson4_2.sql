@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS stations(
 	stationCode VARCHAR(5) UNIQUE NOT NULL,
 	stationName VARCHAR(20) NOT NULL,
 	name VARCHAR(20),
-	stationAddress VARCHAR(50),
+	stationAddrTw VARCHAR(50),
 	stationTel VARCHAR(20),
 	gps VARCHAR(30),
 	haveBike BOOLEAN
@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS station_in_out(
 	FOREIGN KEY (staCode) REFERENCES stations(stationCode)
 	ON DELETE SET NULL
 	ON UPDATE CASCADE
-	/*FOREIGN KEY 關鍵字 DELETE, UPDATE*/
 );
+/*FOREIGN KEY 關鍵字 DELETE, UPDATE*/
 
 SELECT *
 FROM station_in_out in_out JOIN stations s ON in_out.staCode = s.stationcode;/*幫表格取名*/

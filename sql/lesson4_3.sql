@@ -37,3 +37,21 @@ FROM payment
 GROUP BY customer_id
 ORDER BY 筆數 ASC;
 
+SELECT * 
+FROM payment p JOIN customer c ON p.customer_id = c.customer_id;
+
+SELECT (first_name || ' ' || last_name) AS full_name/*字串連結用兩個直綫*/ 
+FROM payment p JOIN customer c ON p.customer_id = c.customer_id;
+
+SELECT (first_name || ' ' || last_name) AS full_name 
+FROM payment p JOIN customer c ON p.customer_id = c.customer_id
+GROUP BY full_name;
+
+SELECT (first_name || ' ' || last_name) AS full_name,SUM(amount)
+FROM payment p JOIN customer c ON p.customer_id = c.customer_id
+GROUP BY full_name;
+
+SELECT (first_name || ' ' || last_name) AS full_name,SUM(amount) AS 總和
+FROM payment p JOIN customer c ON p.customer_id = c.customer_id
+GROUP BY full_name
+ORDER BY 總和 DESC;
