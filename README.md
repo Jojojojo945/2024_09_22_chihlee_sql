@@ -111,6 +111,7 @@ DROP TABLE IF EXISTS stations;
 
 ---
 ### HW - 1006
+* Restore dvdrental folder in pgAdmin4 database, then don't need to create customer table.
 ```
 DROP TABLE IF EXISTS customer;
 
