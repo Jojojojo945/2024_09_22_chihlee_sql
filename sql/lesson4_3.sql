@@ -40,7 +40,8 @@ ORDER BY 筆數 ASC;
 SELECT * 
 FROM payment p JOIN customer c ON p.customer_id = c.customer_id;
 
-SELECT (first_name || ' ' || last_name) AS full_name/*字串連結用兩個直綫*/ 
+/*字串連結用兩個直線，連結first name & last name*/ 
+SELECT (first_name || ' ' || last_name) AS full_name
 FROM payment p JOIN customer c ON p.customer_id = c.customer_id;
 
 SELECT (first_name || ' ' || last_name) AS full_name 

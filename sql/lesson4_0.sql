@@ -1,6 +1,8 @@
 SELECT *
 FROM customer;
 
+DROP TABLE IF EXISTS customer;
+
 SELECT *
 FROM customer
 WHERE first_name = 'Jamie';
