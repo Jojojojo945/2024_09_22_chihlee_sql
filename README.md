@@ -50,8 +50,8 @@ https://meet.google.com/zfb-kupf-nok
         1. General
            * Name: render_jo
         2. Connection
-           * Username: render_jo_user
            * Host name/address: dpg-crnslqm8ii6s73evgni0-a.singapore-postgres.render.com
+           * Username: render_jo_user
            * PW: DEbN3GhqIMg5eM2cXJeq45XKsRHJWEB4 (Save Password)
 
 
@@ -108,4 +108,64 @@ DROP TABLE IF EXISTS stations;
 5. HAVING 條件
 6. ORDER BY 順序
 7. LIMIT 筆數限制
+
+---
+### HW - 1006
+* Restore dvdrental folder in pgAdmin4 database, then don't need to create customer table.
+```
+DROP TABLE IF EXISTS customer;
+
+CREATE TABLE IF NOT EXISTS customer(
+	customer_id int,
+	store_id int,
+	first_name VARCHAR(20),
+	last_name VARCHAR(20),
+	email VARCHAR(100),
+	address_id int,
+	activebool VARCHAR(10),
+	create_date date,
+	last_update timestamp,
+	active boolean
+	);
+
+SELECT *
+FROM customer;
+
+/*first_name為Jamie*/
+SELECT *
+FROM customer
+WHERE first_name = 'Jamie';
+
+/*first_name是Jamie,同時last_name是Rice*/
+SELECT *
+FROM customer
+WHERE first_name = 'Jamie' AND last_name = 'Rice';
+
+/*last_name是Rodriquez 或者 first_name是Adam*/
+SELECT *
+FROM customer
+WHERE last_name = 'Rodriquez' OR first_name = 'Adam';
+
+/*取出first_name是Ann,Anne,Annie*/
+SELECT *
+FROM customer
+WHERE first_name = 'Ann' OR first_name = 'Anne' OR first_name = 'Annie';
+
+/*取出字串開頭是Ann的first_name*/
+SELECT *
+FROM customer
+WHERE first_name LIKE 'Ann%';
+
+/*取出first_name第1個字元是A,同時first_name的字元長度是3到5的資料*/
+SELECT *
+FROM customer
+WHERE first_name LIKE 'A%' AND LENGTH(first_name) BETWEEN 3 AND 5;
+
+/*取出first_name,前3字為Bra,但last_name不是Motley*/
+SELECT *
+FROM customer
+WHERE first_name LIKE 'Bra%' AND last_name NOT LIKE 'Motley';
+
+```
+
 
