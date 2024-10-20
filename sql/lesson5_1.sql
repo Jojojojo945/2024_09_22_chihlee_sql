@@ -39,14 +39,31 @@ GROUP BY 站名, 日期; /*要先把gateincomingcnt AS 每日進站人數用聚�
 
 
 /*基隆火車站2020年,每月份進站人數,由多至少*/
-
+SELECT stationname AS 站名,
+	   TO_CHAR(date, 'YYYY-MM') AS 日期,
+	   SUM(gateincomingcnt) AS 當月總進站人數
+FROM stations JOIN station_in_out ON stationcode = stacode
+WHERE EXTRACT (YEAR FROM date) = 2020 AND stationname = '基隆'
+GROUP BY 站名, 日期
+ORDER BY SUM(gateincomingcnt) DESC;
 
 
 /*基隆火車站2020,2021,2022,每年進站人數*/
-
+SELECT stationname AS 站名, 
+	   EXTRACT (YEAR FROM date) AS 年份,
+	   SUM(gateincomingcnt) AS 每年進站人數
+FROM stations JOIN station_in_out ON stationcode = stacode
+WHERE EXTRACT (YEAR FROM date) IN (2020, 2021, 2022) AND stationname = '基隆'
+/*IN()後面可以加多個年份*/
+GROUP BY 站名,年份; /*只有GROUP BY 年份沒有站名會出錯*/
 
 /*基隆火車站,臺北火車站2020,2021,2022,每年進站人數*/
-
+SELECT stationname AS 站名, 
+	   EXTRACT (YEAR FROM date) AS 年份,
+	   SUM(gateincomingcnt) AS 每年進站人數
+FROM stations JOIN station_in_out ON stationcode = stacode
+WHERE EXTRACT (YEAR FROM date) IN (2020, 2021, 2022) AND stationname IN ('基隆', '臺北')
+GROUP BY 站名,年份;
 
 /*請使用SubQuery 進站人數最多的一筆*/
 
