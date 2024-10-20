@@ -66,6 +66,37 @@ WHERE EXTRACT (YEAR FROM date) IN (2020, 2021, 2022) AND stationname IN ('基隆
 GROUP BY 站名,年份;
 
 /*請使用SubQuery 進站人數最多的一筆*/
+SELECT stationname AS 站名, gateincomingcnt AS 進站人數
+FROM stations JOIN station_in_out ON stationcode = stacode
+WHERE gateincomingcnt = (
+	SELECT MAX(gateincomingcnt)
+	FROM station_in_out
+);
+
 
 /*請使用SubQuery 各站點進站人數最多的一筆*/
+SELECT name, date, gateincomingcnt
+FROM stations JOIN station_in_out ON stationcode = stacode
+/*一筆資料用"="; 有多筆的話用IN; 多筆對多筆用IN()*/
+WHERE (stationname, gateincomingcnt) IN (
+	SELECT stationname AS 站名, MAX(gateincomingcnt) AS 最多人數
+	FROM stations JOIN station_in_out ON stationcode = stacode
+	GROUP BY 站名
+)
+ORDER BY gateincomingcnt;
+
+
+SELECT stationname AS 站名, MAX(gateincomingcnt) AS 最多人數
+FROM stations JOIN station_in_out ON stationcode = stacode
+GROUP BY 站名;
+
+SELECT * /*用*看所有欄位再決定要用哪些欄位*/
+FROM stations JOIN station_in_out ON stationcode = stacode
+/*一筆資料用"="; 有多筆的話用IN; 多筆對多筆用IN()*/
+WHERE (stationname, gateincomingcnt) IN (
+	SELECT stationname AS 站名, MAX(gateincomingcnt) AS 最多人數
+	FROM stations JOIN station_in_out ON stationcode = stacode
+	GROUP BY 站名
+);
+
 
