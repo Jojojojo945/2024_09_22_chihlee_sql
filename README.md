@@ -62,7 +62,7 @@ https://meet.google.com/zfb-kupf-nok
 5. conda init
 	* conda init --all bash
 	* close window and reopen Anaconda Prompt
-6. 取消termail一開始就進入base虛擬環境
+6. 取消terminal一開始就進入base虛擬環境
 	* conda config --set auto_activate_base false
 	* close window and reopen Anaconda Prompt and VS Code
 
