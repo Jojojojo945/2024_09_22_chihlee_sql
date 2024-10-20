@@ -85,7 +85,7 @@ WHERE (stationname, gateincomingcnt) IN (
 )
 ORDER BY gateincomingcnt;
 
-
+/*先按照正常程序寫出來後再用SubQuery*/
 SELECT stationname AS 站名, MAX(gateincomingcnt) AS 最多人數
 FROM stations JOIN station_in_out ON stationcode = stacode
 GROUP BY 站名;
