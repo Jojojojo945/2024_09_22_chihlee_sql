@@ -54,6 +54,18 @@ https://meet.google.com/zfb-kupf-nok
            * Username: render_jo_user
            * PW: DEbN3GhqIMg5eM2cXJeq45XKsRHJWEB4 (Save Password)
 
+### MiniConda
+1. Download [MiniConda] (https://docs.anaconda.com/miniconda/#miniconda-latest-installer-links)
+2. Check **2nd** option for install.
+3. After installation, open Anaconda Prompt
+4. Open [file] (https://github.com/roberthsu2003/python/tree/master/mini_conda)
+5. conda init
+	* conda init --all bash
+	* close window and reopen Anaconda Prompt
+6. 取消termail一開始就進入base虛擬環境
+	* conda config --set auto_activate_base false
+	* close window and reopen Anaconda Prompt and VS Code
+
 
 ---
 
