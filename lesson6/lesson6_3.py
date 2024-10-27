@@ -13,5 +13,11 @@ rows = cur.fetchall()
 names = []
 for row in rows:
     names.append(row[2])
+
+
+option = st.selectbox(
+    "請選擇您最愛的車站？",
+    names
+)
     
-st.write(names)
+st.write("您最愛的是：",option)
