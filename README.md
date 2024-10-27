@@ -45,14 +45,14 @@ https://meet.google.com/zfb-kupf-nok
         * PW: raspberry (Save password)
    * Render
      1. Login Render
-     2. External Database URL (postgresql://render_jo_user:DEbN3GhqIMg5eM2cXJeq45XKsRHJWEB4@dpg-crnslqm8ii6s73evgni0-a.singapore-postgres.render.com/render_jo)
+     2. External Database URL (postgresql://render_jo_dzz5_user:VCLaFk1Oy8GKcwyz8zYt74myUlliRtHj@dpg-csep5h0gph6c73eshc3g-a.oregon-postgres.render.com/render_jo_dzz5)
      3. Register
         1. General
            * Name: render_jo
         2. Connection
-           * Host name/address: dpg-crnslqm8ii6s73evgni0-a.singapore-postgres.render.com
-           * Username: render_jo_user
-           * PW: DEbN3GhqIMg5eM2cXJeq45XKsRHJWEB4 (Save Password)
+           * Host name/address: dpg-csep5h0gph6c73eshc3g-a.oregon-postgres.render.com
+           * Username: render_jo_dzz5_user
+           * PW: VCLaFk1Oy8GKcwyz8zYt74myUlliRtHj (Save Password)
 
 ### MiniConda
 1. Download [MiniConda] (https://docs.anaconda.com/miniconda/#miniconda-latest-installer-links)
