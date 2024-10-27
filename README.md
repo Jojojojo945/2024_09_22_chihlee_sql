@@ -74,6 +74,7 @@ https://meet.google.com/zfb-kupf-nok
         * 確認**右下角**出現虛擬環境 （ex. **'jo'_conda**) - 如果沒出現 - 按右下角 - 上方選單選虛擬環境Python 3.10.15('jo')
         * 在資料夾按右鍵 - ex. lesson6 - 按右鍵 - **在整合式終端機中開啓** - 確認終端機出現 (jo) C:\Users\User\Documents\GitHub\2024_09_22_chihlee_sql\lesson6>
         * 終端機輸入：streamlit run lesson6_3.py
+        * 如果是ipynb副檔名 - 要確認右上角虛擬環境是jo(Python 3.10.15)
    
 
 ---
