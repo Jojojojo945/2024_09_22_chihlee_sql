@@ -20,6 +20,7 @@ https://meet.google.com/zfb-kupf-nok
    * Command Palette > Display (Configure display language)
 3. AutoSave
    * Setting > AutoSave > AfterDelay
+   * Setting > Line Numbers > On (Editor: Line Numbers, Show Line Numbers)
 4. Profile
    * 啓用遠端通道存取 > 開啓此工作階段 > 利用GitHub登入
    * 利用GitHub登入
