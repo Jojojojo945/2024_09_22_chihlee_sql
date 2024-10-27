@@ -71,6 +71,8 @@ https://meet.google.com/zfb-kupf-nok
   	* 開啓終端機 - 建立虛擬環境 - conda create --name (myenv) python=3.10
         * 啟動虛擬環境 - conda activate (myenv) - 確認終端機顯示 (jo) C:\Users\User\Documents\GitHub\2024_09_22_chihlee_sql>
         * pip install -r requirements.txt
+        * 確認右下角出現虛擬環境 （ex. 'jo'_conda)
+        * 在資料夾按右鍵 - ex. lesson6 - 按右鍵 - 在整合式終端機中開啓 - 確認終端機出現 (jo) C:\Users\User\Documents\GitHub\2024_09_22_chihlee_sql\lesson6>
    
 
 ---
