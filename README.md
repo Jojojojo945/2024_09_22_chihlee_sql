@@ -56,10 +56,10 @@ https://meet.google.com/zfb-kupf-nok
            * PW: VCLaFk1Oy8GKcwyz8zYt74myUlliRtHj (Save Password)
 
 ### MiniConda
-1. Download [MiniConda] (https://docs.anaconda.com/miniconda/#miniconda-latest-installer-links)
+1. Download [MiniConda](https://docs.anaconda.com/miniconda/#miniconda-latest-installer-links)
 2. Check **2nd** option for install.
 3. After installation, open Anaconda Prompt
-4. Open [file] (https://github.com/roberthsu2003/python/tree/master/mini_conda)
+4. Open [file](https://github.com/roberthsu2003/python/tree/master/mini_conda)
 5. conda init
 	* conda init --all bash
 	* close window and reopen Anaconda Prompt
