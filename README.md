@@ -84,6 +84,8 @@ https://meet.google.com/zfb-kupf-nok
 
 ### Render
 1. Expire > Create +New > PostgreSQL
+2. Internal Host: dpg-csep5h0gph6c73eshc3g-a
+3. Live Website: https://two024-09-22-chihlee-sql.onrender.com/
 
 ---
 
