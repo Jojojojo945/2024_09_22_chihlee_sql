@@ -81,7 +81,9 @@ https://meet.google.com/zfb-kupf-nok
 	* DATABASE=render_jo_dzz5
 	* USER=render_jo_dzz5_user
 	* PASSWORD=VCLaFk1Oy8GKcwyz8zYt74myUlliRtHj
-   
+
+### Render
+1. Expire > Create +New > PostgreSQL
 
 ---
 
