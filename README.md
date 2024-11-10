@@ -70,11 +70,17 @@ https://meet.google.com/zfb-kupf-nok
 	* 檔案 - 開啓資料夾 - GitHub > 2024_09_22_chihlee_sql (確認進入根目錄而非GitHub資料夾）
   	* 開啓終端機 - 建立虛擬環境 - conda create --name (myenv) python=3.10
         * 啟動虛擬環境 - conda activate (myenv) - 確認終端機顯示 (jo) C:\Users\User\Documents\GitHub\2024_09_22_chihlee_sql>
+        * 右上角 > 選取模組 > 安裝python > 選取虛擬環境
         * 在終端機輸入 - pip install -r requirements.txt
         * 確認**右下角**出現虛擬環境 （ex. **'jo'_conda**) - 如果沒出現 - 按右下角 - 上方選單選虛擬環境Python 3.10.15('jo')
         * 在資料夾按右鍵 - ex. lesson6 - 按右鍵 - **在整合式終端機中開啓** - 確認終端機出現 (jo) C:\Users\User\Documents\GitHub\2024_09_22_chihlee_sql\lesson6>
         * 終端機輸入：streamlit run lesson6_3.py
         * 如果是ipynb副檔名 - 要確認右上角虛擬環境是jo(Python 3.10.15)
+8. .env設定（等於前後不需要有空格）
+	* HOST=dpg-csep5h0gph6c73eshc3g-a.oregon-postgres.render.com
+	* DATABASE=render_jo_dzz5
+	* USER=render_jo_dzz5_user
+	* PASSWORD=VCLaFk1Oy8GKcwyz8zYt74myUlliRtHj
    
 
 ---
