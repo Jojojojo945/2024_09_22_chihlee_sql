@@ -77,10 +77,10 @@ https://meet.google.com/zfb-kupf-nok
         * 終端機輸入：streamlit run lesson6_3.py
         * 如果是ipynb副檔名 - 要確認右上角虛擬環境是jo(Python 3.10.15)
 8. .env設定（等於前後不需要有空格）
-        * HOST=dpg-csep5h0gph6c73eshc3g-a.oregon-postgres.render.com
-        * DATABASE=render_jo_dzz5
-        * USER=render_jo_dzz5_user
-        * PASSWORD=VCLaFk1Oy8GKcwyz8zYt74myUlliRtHj
+	* HOST=dpg-csep5h0gph6c73eshc3g-a.oregon-postgres.render.com
+	* DATABASE=render_jo_dzz5
+	* USER=render_jo_dzz5_user
+	* PASSWORD=VCLaFk1Oy8GKcwyz8zYt74myUlliRtHj
    
 
 ---
