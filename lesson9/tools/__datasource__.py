@@ -61,3 +61,40 @@ def save_to_database(data:list[dict])->None:
             cursor.execute(sql)
             
     conn.close()
+
+    conn = psycopg2.connect(host=os.environ['HOST'], 
+                            database = os.environ['DATABASE'], 
+                            user = os.environ['USER'], 
+                            password =os.environ['PASSWORD'])
+    
+    with conn:
+        with conn.cursor() as cursor:
+            #insert站點資訊
+            for site_info in data:
+                sql = '''
+                    INSERT INTO 站點資訊 
+                    VALUES(%s,%s,%s,%s,%s,%s)
+                    ON CONFLICT DO NOTHING;
+                '''
+                cursor.execute(sql,(site_info['sno'],
+                                    site_info['sna'],
+                                    site_info['sarea'],
+                                    site_info['ar'],
+                                    site_info['latitude'],
+                                    site_info['longitude']))
+
+                #插入youbike資訊
+                sql = '''
+                    INSERT INTO youbike
+                    VALUES(%s,%s,%s,%s,%s,%s)
+                    ON CONFLICT DO NOTHING;
+                '''
+                cursor.execute(sql,(site_info['mday'],
+                                    site_info['sno'],
+                                    site_info['total'],
+                                    site_info['available_rent_bikes'],
+                                    site_info['available_return_bikes'],
+                                    bool(int(site_info['act']))))
+
+
+    conn.close()
