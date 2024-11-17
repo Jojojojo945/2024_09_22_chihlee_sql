@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import streamlit as st
 from time import sleep
-from tools.datasource import get_data
+from lesson9.tools.__datasource__ import get_data
 load_dotenv()
 
 
