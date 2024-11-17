@@ -25,7 +25,7 @@ def get_data()->list | None:
         return response.json()
     
 def save_to_database(data:list[dict])->None:
-    print(data)
+    
     #建立資料表
     load_dotenv()
     conn = psycopg2.connect(host=os.environ['HOST'], 
@@ -66,7 +66,7 @@ def save_to_database(data:list[dict])->None:
                             database = os.environ['DATABASE'], 
                             user = os.environ['USER'], 
                             password =os.environ['PASSWORD'])
-    
+
     with conn:
         with conn.cursor() as cursor:
             #insert站點資訊
@@ -97,4 +97,47 @@ def save_to_database(data:list[dict])->None:
                                     bool(int(site_info['act']))))
 
 
+    conn.close()
+
+def get_sarea_from_database()->list[tuple]:
+    load_dotenv()
+    conn = psycopg2.connect(host=os.environ['HOST'], 
+                            database = os.environ['DATABASE'], 
+                            user = os.environ['USER'], 
+                            password =os.environ['PASSWORD'])
+    with conn:
+        with conn.cursor() as cursor:
+            sql = '''
+                SELECT 行政區
+                FROM 站點資訊
+                GROUP BY 行政區;
+            '''
+            cursor.execute(sql)
+            areas = cursor.fetchall()
+            return areas
+            
+    conn.close()
+
+def get_info_area(area:str)->list[tuple]:
+    load_dotenv()
+    conn = psycopg2.connect(host=os.environ['HOST'], 
+                            database = os.environ['DATABASE'], 
+                            user = os.environ['USER'], 
+                            password =os.environ['PASSWORD'])
+    with conn:
+        with conn.cursor() as cursor:
+            sql = '''
+                SELECT 日期,站點資訊.站點名稱,行政區,站點地址,lat,lng,總車輛,可借,可還,可借,活動
+                FROM youbike
+                JOIN 站點資訊 ON youbike.編號 = 站點資訊.站點編號
+                WHERE (日期,編號) IN (
+                    SELECT MAX(日期),編號
+                    FROM youbike
+                    GROUP BY 編號
+                ) AND 行政區 = %s;
+            '''
+            cursor.execute(sql,(area,))
+            area_info = cursor.fetchall()
+            return area_info
+            
     conn.close()
