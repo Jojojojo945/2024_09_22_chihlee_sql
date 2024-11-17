@@ -9,4 +9,3 @@ import time
 #自訂的function
 def get_data():
     time.sleep(5)
-    
